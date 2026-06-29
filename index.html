@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Restaurante Deluxe</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div class="fondo-estrellas">
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+</div>
+
+<canvas id="fondo"></canvas>
+
+<!-- BIENVENIDA -->
+<div id="bienvenida">
+  <h1>🍽️ Restaurante Deluxe</h1>
+  <p>“Elegancia en cada detalle” ✨</p>
+  <button onclick="entrar()">Entrar</button>
+</div>
+
+<!-- NAV -->
+<nav id="nav" class="oculto">
+  <h2 class="logo">Deluxe</h2>
+  <div>
+    <button onclick="mostrarSeccion('inicio')">Inicio</button>
+    <button onclick="mostrarSeccion('menu')">Menú</button>
+    <button onclick="mostrarSeccion('reservas')">Reservas</button>
+    <button onclick="mostrarSeccion('contacto')">Contacto</button>
+  </div>
+</nav>
+
+<!-- INICIO -->
+<section id="inicio" class="seccion oculto">
+  <div class="logo-container">
+    <img src="logo.png.png" id="logo">
+  </div>
+
+  <h1>Bienvenido</h1>
+  <p class="frase">Vive una experiencia gastronómica de lujo 🍷</p>
+
+  <div class="bloques">
+    <div>
+      <h2>👨‍🍳 Chef Especial</h2>
+      <p>Nuestro chef crea experiencias únicas.</p>
+    </div>
+    <div>
+      <h2>⭐ Opiniones</h2>
+      <p>⭐⭐⭐⭐⭐ “Increíble experiencia”</p>
+      <p>⭐⭐⭐⭐⭐ “Todo delicioso”</p>
+    </div>
+  </div>
+</section>
+
+<!-- MENÚ -->
+<section id="menu" class="seccion oculto">
+  <h1>Menú</h1>
+
+  <div class="categorias">
+    <button onclick="mostrarCategoria('entradas')">Entradas</button>
+    <button onclick="mostrarCategoria('desayuno')">Desayuno</button>
+    <button onclick="mostrarCategoria('almuerzo')">Almuerzo</button>
+    <button onclick="mostrarCategoria('cena')">Cena</button>
+    <button onclick="mostrarCategoria('bebidas')">Bebidas</button>
+    <button onclick="mostrarCategoria('vinos')">Vinos</button>
+    <button onclick="mostrarCategoria('helados')">Helados</button>
+    <button onclick="mostrarCategoria('postres')">Postres</button>
+  </div>
+
+  <div id="platos"></div>
+</section>
+
+<!-- RESERVAS -->
+<section id="reservas" class="seccion oculto">
+  <h1>Reservas</h1>
+  <input type="text" placeholder="Nombre">
+  <input type="date">
+  <input type="time">
+  <button onclick="reservar()">Reservar</button>
+</section>
+
+<!-- CONTACTO -->
+<section id="contacto" class="seccion oculto">
+  <h1>Contacto</h1>
+  <p>📞 300 123 4567</p>
+  <p>📍 Colombia</p>
+
+  <p>📸 Instagram: 
+    <a href="https://instagram.com/nicolle_benitez" target="_blank">
+      @nicolle_benitez
+    </a>
+  </p>
+
+  <iframe src="https://maps.google.com/maps?q=colombia&output=embed"
+  width="100%" height="200"></iframe>
+</section>
+
+<!-- CARRITO -->
+<div class="carrito" onclick="verFactura()">
+  🛒 <span id="contador">0</span>
+</div>
+
+<!-- FACTURA -->
+<div id="factura" class="factura oculto">
+  <h2>Factura</h2>
+  <ul id="lista"></ul>
+  <p id="total"></p>
+  <button onclick="pagar()">💳 Pagar</button>
+  <button onclick="cerrarFactura()">Cerrar</button>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
