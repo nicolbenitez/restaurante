@@ -5,6 +5,23 @@ body {
   color: white;
   overflow-x: hidden;
   position: relative;
+
+  body{
+  font-size:16px;
+}
+
+button{
+  padding:10px;
+  border:none;
+  border-radius:8px;
+  background:#d4af37;
+  color:black;
+  font-weight:bold;
+}
+
+.plato{
+  width:100%;
+}
 }
 
 /* 🔥 FONDO ANIMADO PRO */
@@ -252,3 +269,37 @@ button:hover {
 .fondo-estrellas span:nth-child(8) { top: 10%; left: 50%; animation-delay: 7s; }
 .fondo-estrellas span:nth-child(9) { top: 90%; left: 10%; animation-delay: 2s; }
 .fondo-estrellas span:nth-child(10){ top: 50%; left: 90%; animation-delay: 6s; }
+
+/* 📱 MODO CELULAR */
+@media (max-width: 768px){
+
+  nav{
+    flex-direction:column;
+    align-items:center;
+  }
+
+  #platos{
+    grid-template-columns:1fr;
+  }
+
+  .plato img{
+    width:100%;
+    height:200px;
+  }
+
+  .carrito{
+    bottom:10px;
+    right:10px;
+    padding:8px;
+  }
+
+  h1,h2{
+    text-align:center;
+  }
+
+  button{
+    width:100%;
+    margin-top:5px;
+  }
+
+}
